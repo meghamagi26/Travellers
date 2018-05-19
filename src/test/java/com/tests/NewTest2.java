@@ -7,6 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class NewTest2 {
@@ -26,6 +29,16 @@ public class NewTest2 {
 		
 		Actions actions=new Actions(driver);
 		actions.dragAndDrop(from, to).perform();
+			
+		WebDriverWait wait=new WebDriverWait(driver,15);
+		wait.until(ExpectedConditions.textToBe(By.id("ctl00_ContentPlaceholder1_Label1"),"The price of 'Weekend Package' is : $3999"));
+		
+		String text=driver.findElement(By.id("ctl00_ContentPlaceholder1_Label1")).getText();
+	
+		
+		
+		System.out.println("The Price: "+text);
+		Assert.assertTrue(text.contains("$"));
 	}
 
 }

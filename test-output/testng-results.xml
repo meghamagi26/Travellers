@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39453" started-at="2018-05-19T05:20:15Z" finished-at="2018-05-19T05:20:55Z">
+  <suite name="Default suite" duration-ms="24048" started-at="2018-05-19T06:16:50Z" finished-at="2018-05-19T06:17:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39453" started-at="2018-05-19T05:20:15Z" finished-at="2018-05-19T05:20:55Z">
-      <class name="com.tests.NewTest1">
-        <test-method status="PASS" signature="testHDFC()[pri:0, instance:com.tests.NewTest1@26be92ad]" name="testHDFC" duration-ms="39278" started-at="2018-05-19T05:20:15Z" finished-at="2018-05-19T05:20:55Z">
+    <test name="Default test" duration-ms="24048" started-at="2018-05-19T06:16:50Z" finished-at="2018-05-19T06:17:14Z">
+      <class name="com.tests.NewTest2">
+        <test-method status="PASS" signature="testDragAndDrop()[pri:0, instance:com.tests.NewTest2@5c7fa833]" name="testDragAndDrop" duration-ms="23991" started-at="2018-05-19T11:46:50Z" finished-at="2018-05-19T11:47:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testHDFC -->
-      </class> <!-- com.tests.NewTest1 -->
+        </test-method> <!-- testDragAndDrop -->
+      </class> <!-- com.tests.NewTest2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
