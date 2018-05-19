@@ -1,11 +1,14 @@
 package com.tests;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class NewTest3 {
@@ -34,12 +37,30 @@ public class NewTest3 {
 		
 		
 		WebElement to=driver.findElement(By.id("ToTag"));
-		Actions act2=new Actions(driver);
+		to.sendKeys("ban");
+		
+		Thread.sleep(2000);
+		
+		WebElement ul=driver.findElement(By.id("ui-id-2"));
+		List<WebElement> list=ul.findElements(By.tagName("li"));
+		Assert.assertEquals(list.size(),10);
+		
+		for(WebElement e:list)
+		{
+			String city=e.getText();
+			if(city.contains("BKK"))
+			{
+				e.click();
+				break;
+			}
+		}
+		
+		/*Actions act2=new Actions(driver);
 		act2.sendKeys(to,"ban").perform();
 		Thread.sleep(2000);
 		act2.sendKeys(Keys.ARROW_DOWN).perform();
 		Thread.sleep(2000);
-		act2.sendKeys(Keys.ENTER).perform();
+		act2.sendKeys(Keys.ENTER).perform();*/
 	
 	}
 
