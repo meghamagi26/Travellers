@@ -57,6 +57,11 @@ public class NewTest4 {
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		js.executeScript("document.getElementById('creditcardlogin').click()");
 		
+		
+		
+		
+		
+		
 		//driver.close();
 		//driver.quit();
 	}
